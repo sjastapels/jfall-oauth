@@ -1,0 +1,21 @@
+logging:
+  level:
+    web: debug
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: <create at google.com>
+            client-secret: <create at google.com>
+          github:
+            clientId: <create at github.com>
+            clientSecret: <create at github.com>
+            scope:
+              - read:user
+              - user:email
+
+server:
+  port: 3002
